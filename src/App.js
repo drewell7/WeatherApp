@@ -1,6 +1,5 @@
 import './App.css';
 import UseFetch from './UseFetch.js';
-import { Card, CardTitle } from 'reactstrap';
 import moment from 'moment';
 
 function App() {
@@ -14,8 +13,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Card className='WeatherCard'>
-          <CardTitle>Salt Lake City</CardTitle>
+        <div className='WeatherCard'>
+          
+          <p className='title'>Salt Lake City</p>
           <div className='Day'>
           {moment().format('dddd')}
           </div>
@@ -24,14 +24,15 @@ function App() {
           </div>
         
           
-          <h4 className='HighTemp'>{data?.DailyForecasts[0].Temperature.Maximum.Value}</h4>
-          <p>High</p>
+          <p className='HighTemp'>{data?.DailyForecasts[0].Temperature.Maximum.Value}</p>
+          <p className='highLabel'>High</p>
         
-        <h4 className='LowTemp'>{data?.DailyForecasts[0].Temperature.Minimum.Value}</h4>
-        <p>Low
+        <p className='LowTemp'>{data?.DailyForecasts[0].Temperature.Minimum.Value}</p>
+        <p className='lowLabel'>Low
         </p>
-        <h4 className='Description'>{data?.DailyForecasts[0].Day.IconPhrase}</h4>
-        </Card>
+        <p className='Description'>{data?.DailyForecasts[0].Day.IconPhrase}</p>
+        
+        </div>
       </header>
     </div>
   );

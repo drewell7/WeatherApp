@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 .App {
   text-align: center;
 }
@@ -11,10 +13,55 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .WeatherCard {
   height: 30rem;
   width: 20rem;
-  background: url('./images/clouds.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/clouds.png');
+  border-radius: 2rem;
+  border: 1px solid white;
 }
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  text-shadow: (2px 2px 2px white);
+}
+
+.Day {
+
+}
+
+.Date {
+  padding-bottom: 1rem;
+}
+
+.HighTemp {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: .1rem;
+}
+
+.highLabel {
+  line-height: .1rem;
+  padding-bottom: 2rem;
+  font-weight: 300;
+}
+
+.LowTemp {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: .1rem;
+}
+
+.lowLabel {
+  line-height: .1rem;
+  font-weight: 300;
+}
+
+.Description {
+  padding: 1rem;
+}
+
