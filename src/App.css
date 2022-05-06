@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
 
 .App {
   text-align: center;
@@ -22,26 +22,33 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/clouds.png');
   border-radius: 2rem;
   border: 1px solid white;
+  box-shadow: black 2px 0 10px;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 500;
-  text-shadow: (2px 2px 2px white);
+  margin: 1.5rem;
 }
 
 .Day {
-
+  padding-top: .5rem;
+  background-color: rgba(255,255,255, 0.1);
+  text-shadow: black 1px 0 5px;
 }
 
 .Date {
-  padding-bottom: 1rem;
+  padding-bottom: .6rem;
+  background-color: rgba(255,255,255, 0.1);
+  text-shadow: black 1px 0 5px;
 }
 
 .HighTemp {
   font-size: 42px;
   font-weight: 800;
+  padding-top: .6rem;
   line-height: .1rem;
+  text-shadow: black 1px 0 10px;
 }
 
 .highLabel {
@@ -54,6 +61,7 @@
   font-size: 42px;
   font-weight: 800;
   line-height: .1rem;
+  text-shadow: black 1px 0 10px;
 }
 
 .lowLabel {
@@ -62,6 +70,7 @@
 }
 
 .Description {
-  padding: 1rem;
+  padding-top: 1rem;
+  font-size: 20px;
 }
 

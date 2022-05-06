@@ -24,10 +24,10 @@ function App() {
           </div>
         
           
-          <p className='HighTemp'>{data?.DailyForecasts[0].Temperature.Maximum.Value}</p>
+          <p className='HighTemp'>{data?.DailyForecasts[0].Temperature.Maximum.Value}°</p>
           <p className='highLabel'>High</p>
         
-        <p className='LowTemp'>{data?.DailyForecasts[0].Temperature.Minimum.Value}</p>
+        <p className='LowTemp'>{data?.DailyForecasts[0].Temperature.Minimum.Value}°</p>
         <p className='lowLabel'>Low
         </p>
         <p className='Description'>{data?.DailyForecasts[0].Day.IconPhrase}</p>
