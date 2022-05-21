@@ -53,7 +53,7 @@
 
 .highLabel {
   
-  padding-bottom: .2rem;
+  padding-bottom: 0;
   font-weight: 300;
 }
 
@@ -66,18 +66,16 @@
 }
 
 .lowLabel {
-  padding-bottom: .2rem;
+  padding-bottom: 0;
   font-weight: 300;
 }
 
 .Description {
-  padding-top: .8rem;
+  padding-top: 1rem;
   font-size: 20px;
 }
 
 .weatherIcon {
   height: 80px;
-  
-  
 }
 
