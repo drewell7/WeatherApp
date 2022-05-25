@@ -41,12 +41,13 @@ function App() {
             </div>
        
             <div>
-              <img className='weatherIcon' src={WeatherIcons[data.DailyForecasts[0].Day.Icon].image} alt="" />
+              <img className='weatherIcon' src={WeatherIcons[data?.DailyForecasts[0].Day.Icon].image} alt="" />
             </div>
 
             <p className="Description">
               {data?.DailyForecasts[0].Day.IconPhrase}
             </p>
+
           </div>
         </div>
       </header>
