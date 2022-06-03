@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import "./App.css";
 import UseFetch from "./UseFetch.js";
 import moment from "moment";
-import WeatherIcons from "./WeatherIcons.js";
+import WeatherIcons from './WeatherIcons.js';
 
-function App() {
+
+export default function App() {
+  const [index, setIndex] = useState(1);
+  const {image, name} = WeatherIcons[index];
   const { data, loading, error } = UseFetch(
     "http://dataservice.accuweather.com/forecasts/v1/daily/5day/331216?apikey=3vXnzSU3onkZ9JG1wn46HLA6ElaZtLcc"
   );
@@ -14,10 +18,14 @@ function App() {
 
   console.log(data);
 
-    
 
+  
+
+    
+    
+  
   return (
-      
+    
     <div className="App">
       <header className="App-header">
         <div className="WeatherCard">
@@ -39,11 +47,11 @@ function App() {
                 <p className="lowLabel">Low</p>
               </div>
             </div>
-       
-            <div>
-              <img className='weatherIcon' src={WeatherIcons[data?.DailyForecasts[0].Day.Icon].image} alt="" />
+        
+            <div onLoad={() => setIndex(data?.DailyForecasts[0].Day.Icon)}>
+                <img className='weatherIcon' src={image} alt={name} key='id' />
             </div>
-
+           
             <p className="Description">
               {data?.DailyForecasts[0].Day.IconPhrase}
             </p>
@@ -52,9 +60,17 @@ function App() {
         </div>
       </header>
     </div>
+            
   );
-
   // {data?.DailyForecasts[0].Day.Icon}
-}
 
-export default App;
+
+};
+
+
+
+
+
+
+
+
